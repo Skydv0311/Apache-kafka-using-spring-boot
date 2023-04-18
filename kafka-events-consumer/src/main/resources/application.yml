@@ -1,3 +1,6 @@
+topics:
+  retry: 'library-events.RETRY'
+  dlt: 'library-events.DLT'
 spring:
   kafka:
     consumer:
@@ -17,8 +20,11 @@ spring:
     database: h2
     database-platform: org.hibernate.dialect.H2Dialect
     generate-ddl: true
+    hibernate:
+      ddl-auto: create
   h2:
     console:
       enabled: true
 server:
   port: 8081
+

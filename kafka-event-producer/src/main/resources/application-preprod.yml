@@ -1,0 +1,18 @@
+spring:
+  kafka:
+    template:
+      default-topic: library-events
+    producer:
+      bootstrap-servers: localhost:9095
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: 1
+      retries: 10
+      ssl:
+        trust-store-location: file:/stsworkspace/Apache-kafka-using-Spring-Boot/ssl/client.truststore.jks
+        trust-store-password: changeit
+        key-store-location: file:/stsworkspace/Apache-kafka-using-Spring-Boot/ssl/client.keystore.jks
+        key-store-password: changeit
+      security:
+        protocol: SSL
+
